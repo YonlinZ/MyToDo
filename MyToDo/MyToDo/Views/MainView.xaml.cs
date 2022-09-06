@@ -31,6 +31,11 @@ namespace MyToDo.Views
             };
 
             colorZone.MouseDoubleClick += btnMax_Click;
+
+            menuBar.SelectionChanged += (_, _) =>
+            {
+                drawerHost.IsLeftDrawerOpen = false;
+            };
         }
 
         private void btnMin_Click(object sender, RoutedEventArgs e)
